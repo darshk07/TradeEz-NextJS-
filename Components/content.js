@@ -27,6 +27,10 @@ export default function content() {
         var accounts = await web3.eth.getAccounts();
         web3.eth.getBalance(`${accounts[0]}`).then(res=>setUserBalance(ethers.utils.formatEther(res)));
     }
+
+    useEffect(() => {
+        connectMetamask();
+    }, [])
     return (
         <div className={style.main} >
 
@@ -53,11 +57,7 @@ export default function content() {
                 <div className={style.animation}>
 
                 </div>
-                {/* <div className={style.payments}>
-                    <input type="text" className={style.inputID} placeholder='Enter User ID' />
-                    <input type="number" className={style.inputamount} placeholder='Enter Amount' />
-                    <button onClick={clickHandler} className={style.pay}>Pay</button>
-                </div> */}
+                
 
             </div>
         </div>

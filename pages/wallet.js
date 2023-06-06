@@ -120,9 +120,12 @@ function Wallet() {
         return;
     }
     useEffect(()=>{
-        connectContract();
+        connectMetamask();
     }, [])
 
+    const clickHandler = e => {
+        e.preventDefault();
+    }
     return (
         <div className={style.wrapper}>
             <Sidenav />
@@ -133,11 +136,16 @@ function Wallet() {
                         <div className={style.userpic}><Image src='/user.png' width={60} height={60} /></div>
                     </> : <button className={style.Metamask} onClick={connectMetamask}>Connect to MetaMask</button>}
                 </div>
-                <div className={style.body}>
+                {/* <div className={style.body}>
                     <button className={style.button} onClick={connectContract}>CONNECT TO CONTRACT</button>
                     <button className={style.button} onClick={changeData}>CHANGE DATA</button>
                     <button className={style.button} onClick={getData}>READ FROM CONTRACT</button>
                     <p>{contractData}</p>
+                </div> */}
+                <div className={style.payments}>
+                    <input type="text" className={style.inputID} placeholder='Enter User ID' />
+                    <input type="number" className={style.inputamount} placeholder='Enter Amount' />
+                    <button onClick={clickHandler} className={style.pay}>Pay</button>
                 </div>
             </div>
         </div>
