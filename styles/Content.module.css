@@ -1,0 +1,96 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 70em;
+}
+
+.topbar{
+    padding: 30px 20px;
+    width: 67rem;
+    margin-left: 150px;
+    margin-top: 50px;
+    /* background: linear-gradient(90deg, #1545EA01 -15.55%, #787E8530 114.83%); */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: 0px solid blue;
+}
+
+.username{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.wrapper {
+    margin-left: 150px;
+    margin-top: 100px;
+    display: flex;
+}
+
+.heading{
+    font-size: 60px;    
+    margin-left: 150px;
+    opacity: 0.75;
+}
+.h1 {
+    font-size: 25px;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.balance {
+    opacity: 1;
+    font-size: 20px;
+    margin: 40px auto auto 60px;
+
+}
+
+.value {
+    margin: 40px auto auto 50px;
+    font-size: 25px;
+}
+
+.card {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    background:linear-gradient(90deg, #1545EA50 -15.55%, #787E85ff 114.83%);
+    border: 0px solid #2c61c0;
+    border-radius: 20px;
+    ;
+    opacity: 1;
+}
+
+.payments {
+    margin-top: 60px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pay {
+    color: white;
+    padding: 20px 30px;
+    background: linear-gradient(90deg, #1545EA -15.55%, #787E85 114.83%);
+    border: 3px solid #0A2436;
+    box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.77);
+    border-radius: 74px;
+    font-size: 25px;
+}
+
+.pay:hover {
+    background: linear-gradient(90deg, #1569FF -15.55%, #787E85 114.83%);
+}
+
+.inputID, .inputamount{
+    padding: 10px 10px;
+    height: 25px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
