@@ -8,7 +8,7 @@ export default function Sidenav() {
         <div className={style.container}>
             <Image alt='/' className={style.logo}src="/logo.jpg" width={150} height={150} />
             <ul className={style.links}>
-                <li className={style.link}><Link href="/">Home</Link></li>
+                <li className={style.link}><Link href="/dashboard">Home</Link></li>
                 <li className={style.link}><Link href="/prices">Analytics</Link></li>
                 <li className={style.link}><Link href="/wallet">Wallet</Link></li>
                 <li className={style.link}><Link href="/profile">Profile</Link></li>

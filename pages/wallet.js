@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "../styles/Wallet.module.css"
 import { ethers } from 'ethers';
 import Sidenav from "@/Components/sidenav";
+import Image from "next/image";
 
 function Wallet() {
 
@@ -108,7 +109,7 @@ function Wallet() {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         contract = new ethers.Contract(Address, ABI, signer);
-        console.log(contract.address); d
+        console.log(contract.address); 
     }
     const getData = async () => {
         const res = await contract.retrieve();
@@ -118,17 +119,26 @@ function Wallet() {
     const changeData = async () => {
         return;
     }
+    useEffect(()=>{
+        connectContract();
+    }, [])
 
     return (
         <div className={style.wrapper}>
             <Sidenav />
-            <div className={style.body}>
-                <button className={style.button} onClick={connectMetamask}>CONNECT TO METAMASK</button>
-                <p>{account}</p>
-                <button className={style.button} onClick={connectContract}>CONNECT TO CONTRACT</button>
-                <button className={style.button} onClick={changeData}>CHANGE DATA</button>
-                <button className={style.button} onClick={getData}>READ FROM CONTRACT</button>
-                <p>{contractData}</p>
+            <div className={style.content}>
+                <div className={style.topbar}>
+                    {account ? <>
+                        <div className={style.username}>{account}</div>
+                        <div className={style.userpic}><Image src='/user.png' width={60} height={60} /></div>
+                    </> : <button className={style.Metamask} onClick={connectMetamask}>Connect to MetaMask</button>}
+                </div>
+                <div className={style.body}>
+                    <button className={style.button} onClick={connectContract}>CONNECT TO CONTRACT</button>
+                    <button className={style.button} onClick={changeData}>CHANGE DATA</button>
+                    <button className={style.button} onClick={getData}>READ FROM CONTRACT</button>
+                    <p>{contractData}</p>
+                </div>
             </div>
         </div>
     );

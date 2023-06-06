@@ -34,9 +34,9 @@ export default function content() {
                 {account ? <>
                     <div className={style.username}>{account}</div>
                     <div className={style.userpic}><Image src='/user.png' width={60} height={60} /></div>
-                </> : <button className="connect_metamask" onClick={connectMetamask}>Connect to MetaMask</button>}
+                </> : <button className={style.Metamask} onClick={connectMetamask}>Connect to MetaMask</button>}
             </div>
-            <div className={style.heading}>Hey There </div>
+            <div className={style.heading}>Hey there! </div>
             <div className={style.wrapper}>
                 <div className={style.overview}>
                     <h1 className={style.h1}>Overview</h1>
@@ -46,7 +46,7 @@ export default function content() {
                                 <div className={style.balance}>Balance</div>
                                 <div className={style.value}>{userBalance}</div>
                             </> : 
-                            <button onClick={getUserBalance}>Get Balance</button>
+                            <button className={style.getBalance} onClick={getUserBalance}>Get Balance</button>
                             }
                     </div>
                 </div>
