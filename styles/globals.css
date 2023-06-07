@@ -137,7 +137,8 @@ table {
 Body {
   background: linear-gradient(140.98deg, #0E162A -0.72%, #07112B 45.34%, #00081B 97.96%);
   background-repeat: no-repeat;
-    height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
   color: white;
   opacity: 0.85;
   font-family: 'Work Sans', sans-serif;
