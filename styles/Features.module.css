@@ -1,0 +1,56 @@
+.screenleft {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    height: 500 px;
+}
+
+.screenright {
+    display: flex;
+    justify-content: center;
+    height: 500 px;
+}
+
+.card {
+    color: black;
+    width: 400px;
+    height: 500 px;
+    margin-bottom: 10px;
+    margin-right: 60px;
+    padding: 10px;
+    border: 0px solid #ccc;
+    background-color: #787E8570;
+
+}
+
+.card h5{
+    font-size: 28px;
+    color: white;
+    opacity: 0.76;
+}
+.fit {
+    max-height: 350px;
+    max-width: 350px;
+}
+
+.proper {
+    box-sizing: border-box;
+}
+
+.btn {
+    margin: 10px;
+    display: block;
+}
+
+.cards {
+    box-sizing: border-box;
+    min-height: 218px;
+    min-width: 611px;
+}
+
+.heading{
+    margin-left: 150px;
+    opacity: 0.85;
+    margin-top: 20px;
+    font-size: 60px;
+}
